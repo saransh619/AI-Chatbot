@@ -72,13 +72,15 @@ An AI-powered chatbot built with **Node.js** (backend), **React.js** (frontend),
 
 ## Deployment
 
-Frontend (Netlify)
-The frontend is hosted on Netlify. You can access the live application here:
-👉 https://ai-chatbot-talk.netlify.app
+### Frontend (Netlify)
 
-Backend (Render)
-The backend is hosted on Render. The API is accessible at:
-👉 https://ai-chatbot-8snz.onrender.com
+The frontend is hosted on **Netlify**. You can access the live application here:  
+👉 [https://ai-chatbot-talk.netlify.app](https://ai-chatbot-talk.netlify.app)
+
+### Backend (Render)
+
+The backend is hosted on **Render**. The API is accessible at:  
+👉 [https://ai-chatbot-8snz.onrender.com](https://ai-chatbot-8snz.onrender.com)
 
 ---
 
