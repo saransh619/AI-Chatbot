@@ -16,6 +16,10 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
+app.get("/", (req, res) => {
+  res.send("API is working perfectly fine!");
+});
+
 app.use("/api/chat", require("./routes/chatRoutes"));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
