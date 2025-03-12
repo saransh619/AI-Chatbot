@@ -12,6 +12,7 @@ An AI-powered chatbot built with **Node.js** (backend), **React.js** (frontend),
 - **Dynamic Responses**: Powered by Cohere AI for smart replies.
 - **User-Friendly UI**: Built with React.js for a smooth experience.
 - **Persistent Chat History**: Stores conversations in MongoDB.
+- **Environment-Specific Configuration**: Easily switch between development and production modes.
 
 ---
 
@@ -32,11 +33,16 @@ An AI-powered chatbot built with **Node.js** (backend), **React.js** (frontend),
    ```
 
 2. **Install Dependencies**
+   For the frontend:
 
    ```bash
    cd client
    npm install
-   cd ..
+   ```
+
+   For the backend:
+
+   ```bash
    cd server
    npm install
    ```
@@ -46,17 +52,23 @@ An AI-powered chatbot built with **Node.js** (backend), **React.js** (frontend),
    ```bash
    cd server
    cp .env.example .env
+
+   COHERE_API_KEY: Sign up on Cohere AI to get your API key.
+   MONGO_URI: Create a free cluster on MongoDB Atlas and get your connection string.
+   NODE_ENV: Set to development for local development or production for deployment.
    ```
 
-4. **Start the Server**
+4. **Start the Server (Backend)**
+   In the server folder, run:
 
    ```bash
    npm run dev
    ```
 
-5. **Start the Client**
+5. **Start the Client (Frontend)**
+   In the client folder, run:
+
    ```bash
-   cd client
    npm run dev
    ```
 
@@ -67,6 +79,24 @@ An AI-powered chatbot built with **Node.js** (backend), **React.js** (frontend),
 1. Open the app in your browser.
 2. Type a message and press Enter or click Send.
 3. Enjoy chatting with the AI!
+
+---
+
+## Environment Configuration
+
+Development Mode (NODE_ENV=development)
+
+- **Frontend URL**: http://localhost:5173
+- **Backend URL**: http://localhost:5000
+- **CORS**: Allows requests from http://localhost:5173.
+- Use this mode for local development and testing.
+
+Production Mode (NODE_ENV=production)
+
+- **Frontend URL**: https://ai-chatbot-talk.netlify.app
+- **Backend URL**: https://ai-chatbot-8snz.onrender.com
+- **CORS**: Allows requests from https://ai-chatbot-talk.netlify.app
+- Use this mode when deploying the application.
 
 ---
 

@@ -1,7 +1,7 @@
 import axios from "axios";
+import { API_BASE_URL } from "../config";
 
-// const API_BASE_URL = "http://localhost:5000/api/chat";
-const API_BASE_URL = "https://ai-chatbot-8snz.onrender.com/api/chat"; // backend deployed on Render
+console.log("API_BASE_URL", API_BASE_URL);
 
 export const sendMessage = async (message) => {
   try {
