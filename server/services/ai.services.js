@@ -8,10 +8,18 @@ if (!process.env.COHERE_API_KEY) {
 const getChatResponse = async (userMessage) => {
   console.log("userMessage", userMessage);
   try {
+    const isCodeRequest =
+      /code|javascript|typescript|python|ruby|php|java|c\+\+|html|css/i.test(
+        userMessage
+      );
+
     const response = await axios.post(
       "https://api.cohere.ai/v1/chat",
       {
         message: userMessage,
+        preamble: isCodeRequest
+          ? "You are a helpful AI assistant. When providing code examples, format them with markdown code blocks using triple backticks and specify the language."
+          : "You are a helpful AI assistant.",
       },
       {
         headers: {
@@ -27,8 +35,27 @@ const getChatResponse = async (userMessage) => {
   }
 };
 
-module.exports = { getChatResponse };
+// const getChatResponse = async (userMessage) => {
+//   // console.log("userMessage", userMessage);
+//   try {
+//     const response = await axios.post(
+//       "https://api.cohere.ai/v1/chat",
+//       {
+//         message: userMessage,
+//         preamble: "You are a helpful AI assistant.",
+//       },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${process.env.COHERE_API_KEY}`,
+//           "Content-Type": "application/json",
+//         },
+//       }
+//     );
+//     return response.data.text;
+//   } catch (error) {
+//     console.error("Error calling Cohere API:", error);
+//     throw error;
+//   }
+// };
 
-// getChatResponse("Hello, how are you?")
-//   .then((response) => console.log(response))
-//   .catch((error) => console.error(error));
+module.exports = { getChatResponse };

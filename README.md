@@ -1,7 +1,5 @@
 # AI-Chatbot 🤖
 
-![Project Screenshot](./screenshot.png)
-
 An AI-powered chatbot built with **Node.js** (backend), **React.js** (frontend), and **Cohere AI** for natural language processing. Chat with an intelligent bot in real-time!
 
 ---
@@ -19,7 +17,20 @@ An AI-powered chatbot built with **Node.js** (backend), **React.js** (frontend),
 ## Technologies
 
 - **Frontend**: React.js, Vite, Axios
-- **Backend**: Node.js, Express.js, Cohere AI, MongoDB
+- **Backend**: Node.js, Express.js, Cohere AI
+- **Database**: MongoDB
+
+---
+
+## Screenshots
+
+### Version 1
+
+![Version 1 Screenshot](./screenshot-version1.png)
+
+### Version 2
+
+![Version 2 Screenshot](./screenshot-version2.png)
 
 ---
 
@@ -55,7 +66,7 @@ An AI-powered chatbot built with **Node.js** (backend), **React.js** (frontend),
 
    COHERE_API_KEY: Sign up on Cohere AI to get your API key.
    MONGO_URI: Create a free cluster on MongoDB Atlas and get your connection string.
-   NODE_ENV: Set to development for local development or production for deployment.
+   NODE_ENV: Set to development when worked on locally or production when deployed.
    ```
 
 4. **Start the Server (Backend)**
@@ -111,6 +122,24 @@ The frontend is hosted on **Netlify**. You can access the live application here:
 
 The backend is hosted on **Render**. The API is accessible at:  
 👉 [https://ai-chatbot-8snz.onrender.com](https://ai-chatbot-8snz.onrender.com)
+
+---
+
+## Version History
+
+### Version 1
+
+- Initial release of the AI-Chatbot.
+- Basic chat interface with real-time responses.
+- Integration with Cohere AI for dynamic replies.
+- MongoDB for persistent chat history.
+
+### Version 2
+
+- Added **code block support** with syntax highlighting and copy functionality.
+- Improved UI/UX with avatars, auto-expanding textarea, and scrollable chat history.
+- Enhanced error handling and loading states for a smoother user experience.
+- Dynamic preamble for code-related queries to provide better-formatted responses.
 
 ---
 
