@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 80vh;
+  margin-bottom: 70px;
 }
 
 .chat-history {
@@ -46,7 +47,7 @@ body {
   padding: 8px;
   border: none;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 18px;
   resize: none;
   overflow-y: auto;
   outline: none; 
@@ -182,4 +183,145 @@ pre.hljs {
 
 .footer p {
   margin: 0;
+}
+
+/* Tablet Devices (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .chat-container {
+    width: 90%;
+    height: 70vh;
+    margin: 45px;
+}
+
+  .chat-history {
+    padding: 15px;
+  }
+
+  .chat-input {
+    padding: 8px; 
+  }
+
+  .chat-textarea {
+    font-size: 15px;
+    min-height: 38px; 
+  }
+
+  .chat-input button {
+    padding: 8px 14px; 
+    font-size: 15px; 
+  }
+
+  .avatar {
+    width: 34px; 
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .message-content {
+    padding: 10px 14px;
+    max-width: calc(100% - 55px); 
+  }
+
+  .code-block {
+    margin: 10px 0;
+  }
+
+  .code-header {
+    padding: 6px 10px; 
+  }
+
+  .copy-button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  pre.hljs {
+    padding: 14px; 
+    font-size: 13px;
+  }
+
+  .footer {
+    font-size: 13px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    width: 330px;
+    height: 65vh;
+    padding-bottom: 75px;
+  }
+
+  .chat-history {
+    height: calc(100% - 100px);
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+
+  .chat-input {
+    position: fixed;
+    bottom: 82px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjusts width for better scaling */
+    max-width: 312px;
+    padding: 10px;
+    background: white;
+  }
+
+  .chat-textarea {
+    font-size: 15px; 
+    min-height: 38px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333; 
+    color: #fff; 
+    }
+}
+
+/* For very small screens (400px and below) */
+@media (max-width: 400px) {
+  .chat-container {
+    width: 300px;
+    height: 65vh;
+    padding-bottom: 75px;
+    overflow: hidden; 
+  }
+
+  .chat-history {
+    height: calc(100% - 100px);
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+
+  .chat-input {
+    position: fixed;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 280px;
+    background: white;
+  }
+
+  .chat-textarea {
+    font-size: 15px;
+    min-height: 35px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 12px;
+    background-color: #333; 
+    color: #fff;   }
 }
