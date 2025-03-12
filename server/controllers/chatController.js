@@ -1,5 +1,5 @@
 const Chat = require("../models/ChatModel");
-const { getChatResponse } = require("../services/openaiService");
+const { getChatResponse } = require("../services/ai.services");
 
 const sendMessage = async (req, res) => {
   const { message } = req.body;
