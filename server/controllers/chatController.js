@@ -3,11 +3,9 @@ const { getChatResponse } = require("../services/ai.services");
 
 const sendMessage = async (req, res) => {
   const { message } = req.body;
-  console.log("message", message);
 
   try {
     const botResponse = await getChatResponse(message);
-    console.log("botResponse", botResponse);
 
     // Save chat to MongoDB
     const chat = new Chat({ userMessage: message, botResponse });

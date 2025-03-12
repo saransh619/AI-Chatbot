@@ -6,7 +6,6 @@ if (!process.env.COHERE_API_KEY) {
 }
 
 const getChatResponse = async (userMessage) => {
-  console.log("userMessage", userMessage);
   try {
     const isCodeRequest =
       /code|javascript|typescript|python|ruby|php|java|c\+\+|html|css/i.test(

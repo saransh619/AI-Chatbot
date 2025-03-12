@@ -18,11 +18,14 @@ const corsOptions = {
           "http://127.0.0.1:5173",
           "http://localhost:3000",
         ],
-  methods: "GET,POST,PUT,PATCH,DELETE",
+  methods: "GET,POST,PUT,PATCH,DELETE,OPTIONS",
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
 };
 
 app.use(cors(corsOptions));
+
+app.options("*", cors(corsOptions)); // Allow preflight for all routes
 
 app.use(express.json());
 
